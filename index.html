@@ -10,13 +10,15 @@
 		<link rel="stylesheet" href="css/app.css">
 	</head>
 	<body>
-		<section class="todoapp">
+		<section class="todoapp" id="cql">
 			<header class="header">
 				<h1>todos</h1>
 				<input class="new-todo" placeholder="What needs to be done?" autofocus>
 			</header>
 			<!-- This section should be hidden by default and shown when there are todos -->
 			<section class="main">
+				<p>txt:{{txt}}</p>
+				<input id="cn" v-model="inputtxt"><button @click="cun()">存储</button>
 				<input id="toggle-all" class="toggle-all" type="checkbox">
 				<label for="toggle-all">Mark all as complete</label>
 				<ul class="todo-list">
@@ -69,6 +71,8 @@
 			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 		</footer>
 		<!-- Scripts here. Don't remove ↓ -->
+		<script src="node_modules/jquery/dist/jquery.js"></script>
+		<script src="node_modules/vue/dist/vue.js"></script>
 		<script src="node_modules/todomvc-common/base.js"></script>
 		<script src="js/app.js"></script>
 	</body>
